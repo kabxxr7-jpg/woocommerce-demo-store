@@ -17,7 +17,7 @@ measured speed fixes, security hardening and GA4 ecommerce tracking through Goog
 | The slow "before" state | **Simulated on purpose:** real wordpress.org plugins (MetaSlider, Font Awesome, Contact Form 7) plus a must-use plugin that recreates common theme mistakes, and a database filled with made-up revisions, expired transients, spam and leftovers |
 | Speed numbers | **Real measurements**, Lighthouse 13.5, 3 runs per page and device, medians |
 | Security checks | **Real**, 31 automated checks run against the live stack (`tests/security.sh`) |
-| GA4 and GTM | **Real** Google accounts: container `GTM-WBDM5JQ9`, GA4 property `G-0MCNTZPGY7`, used only for this demo. Events confirmed in GA4 Realtime; **DebugView not completed** (see [docs/TRACKING.md](docs/TRACKING.md)) |
+| GA4 and GTM | **Real** Google accounts: container `GTM-WBDM5JQ9`, GA4 property `G-0MCNTZPGY7`, used only for this demo. Events confirmed in GA4 Realtime and GA4 DebugView (see [docs/TRACKING.md](docs/TRACKING.md)) |
 | Hosting | One Mac at home. Not a production host: if the Mac sleeps, the demo is down |
 
 ## Speed: before and after
@@ -82,9 +82,9 @@ GA4 ecommerce events through Google Tag Manager with Consent Mode v2: `view_item
 `remove_from_cart`, `view_cart`, `begin_checkout`, `purchase` (once per order, never on reload). The cart events work
 with the page cache because they are queued in the visitor's session and collected by the browser. Details and the
 verification are in [docs/TRACKING.md](docs/TRACKING.md). The automated walk passes the 11 checks of my
-[tracking-kit](https://github.com/kabxxr7-jpg/tracking-kit) validator, and GA4 Realtime shows the events in the real property:
+[tracking-kit](https://github.com/kabxxr7-jpg/tracking-kit) validator, and GA4 DebugView shows the whole funnel in the real property:
 
-![GA4 Realtime](reports/ga4/realtime-events-2.png)
+![GA4 DebugView](reports/ga4/debugview-funnel.jpg)
 
 ## Run it
 

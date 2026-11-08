@@ -3,7 +3,7 @@
 | Piece | Where |
 |---|---|
 | dataLayer events, Consent Mode v2, GTM loader | `wp-content/mu-plugins/pp-tracking.php` (no plugin from a marketplace; about 300 lines) |
-| GTM container (GA4 Google tag + one GA4 event tag per ecommerce event) | container `GTM-WBDM5JQ9`, published (version 6); import file `gtm/container.json` (from my tracking-kit, IDs filled in). The live container also has `debug_mode = {{Cookie - pp_ga_debug}}` (a dataLayer variable, despite its name) in the Google tag's configuration and shared event settings, added in the GTM editor |
+| GTM container (GA4 Google tag + one GA4 event tag per ecommerce event) | container `GTM-WBDM5JQ9`, published; it is exactly `gtm/container.json` (from my tracking-kit, IDs filled in, plus the opt-in `debug_mode` parameter on each event tag) |
 | GA4 property | "Pear & Porcelain (demo store)", measurement ID `G-0MCNTZPGY7`, test property for this demo only |
 | Automated check of the events | `tests/tracking/walk.ts` + the tracking-kit validator (`tests/tracking/validator.ts`) |
 
@@ -47,14 +47,20 @@ Advertising consent stays denied: the store has no ad tags.
    `add_to_cart`, `view_cart`, `begin_checkout` and `purchase` (2 purchases, counted as key events): screenshots
    `reports/ga4/realtime-events-1.png` and `-2.png`.
 
-**Not done: GA4 DebugView.** DebugView stayed empty. Two reasons, both checked: the browser available for the
-Tag Assistant preview blocks requests to googletagmanager.com (an extension; the same URL loads from the command line),
-and in the headless runs GA4 did not mark hits as debug traffic although `debug_mode` was set (GTM read
-`pp_ga_debug = true` from the dataLayer, the Google tag had `debug_mode` in both its configuration and shared event
-settings, and no hit carried a debug flag). The opt-in switch (`?pp_ga_debug=1`) is left in place. To finish this
-check: open GTM Preview (Tag Assistant) on https://shop.kabiirlabs.com in a browser without an ad blocker, accept
-analytics, walk to a purchase and screenshot DebugView.
+3. **GA4 DebugView** (2026-11-09): the same live walk, started with `?pp_ga_debug=1`. DebugView showed the whole
+   funnel from one debug device: `view_item_list`, `view_item`, `add_to_cart`, `view_cart`, `begin_checkout`, `purchase`
+   (purchase with its parameters and both products, PP-013 and PP-001). Screenshots: `reports/ga4/debugview-funnel.jpg`,
+   `debugview-purchase-params.jpg`, `debugview-purchase-items.jpg`. Only made-up checkout details were used, and
+   nothing personal is visible in them.
 
-Realtime is the evidence used instead: it shows events GA4 accepted into the property, not only what the browser sent.
-Headless Chrome identifies itself as "HeadlessChrome", which GA4 drops as bot traffic, so live runs use the normal
-Chrome user agent.
+### The debug switch
+
+`?pp_ga_debug=1` sets a one-hour cookie; the store then pushes `{ pp_ga_debug: true }` to the dataLayer before GTM
+loads, and each GA4 event tag sends it as the `debug_mode` event parameter. `?pp_ga_debug=0` clears it. Normal visitors
+never have the cookie, and their hits carry no debug flag (checked). What did **not** work, for the record: putting
+`debug_mode` only in the Google tag's configuration or shared event settings. GTM read the value (`true`), but the GA4
+event tags did not inherit it and no hit was marked; setting it on each event tag did.
+
+The first DebugView attempt (2026-11-08) also failed in the user's own Chrome, where an extension blocks
+googletagmanager.com, so the walk runs in a separate browser. Headless Chrome identifies itself as "HeadlessChrome",
+which GA4 drops as bot traffic, so live runs use the normal Chrome user agent.
