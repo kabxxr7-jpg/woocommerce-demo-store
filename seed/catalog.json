@@ -1,0 +1,484 @@
+{
+ "store": "Pear & Porcelain (fictional demo store)",
+ "currency": "USD",
+ "products": [
+  {
+   "sku": "PP-001",
+   "name": "Winter Friends Octagonal Bowl",
+   "category": "Bowls",
+   "price": 48,
+   "sale_price": null,
+   "short": "Eight-sided serving bowl with pine, bamboo and plum blossom in iron red.",
+   "image": {
+    "openverse_id": "9759c997-a17d-4784-bcc6-55f3852a25b3",
+    "url": "https://lh4.ggpht.com/V4ilCPaB3t-ySJBgMFfiosXn_YTHhEuDPtqxHIXGaOTZycJCGaJUEDN47eTG11lmTxa-lhPCEABwQksCx5BX31wsJw",
+    "width": 3000,
+    "height": 3000,
+    "source_title": "Octagonal bowl with The three friends of winter, floral scrolls and hôô, anonymous, c. 1670 - c. 1690",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1968-231-A",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-002",
+   "name": "Crane & Pomegranate Bowl",
+   "category": "Bowls",
+   "price": 42,
+   "sale_price": null,
+   "short": "Deep coral glaze with flying cranes; generous enough for salads or fruit.",
+   "image": {
+    "openverse_id": "44e47e83-c292-409a-9664-1fdb727ad88b",
+    "url": "http://lh6.ggpht.com/LB9Ze8nFT7UKUxD3WCrWJgNMYlz-8sLWUftHQ4nf2BAqIf-33aFOnIsSv2Cs6_d93qJFWUDsipUnlfQa4KP6fJZi_MM",
+    "width": 3000,
+    "height": 2209,
+    "source_title": "Bowl with flying cranes, a pomegranate spray and floral scrolls, anonymous, c. 1700 - c. 1799",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-15133",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-003",
+   "name": "Jade Dragon Bowl",
+   "category": "Bowls",
+   "price": 56,
+   "sale_price": 49,
+   "short": "Emerald ground with a pair of dragons chasing a pearl.",
+   "image": {
+    "openverse_id": "276b6aae-e877-408f-9f23-cb707494b25d",
+    "url": "http://lh6.ggpht.com/aO3rk51R2rXM-e2meQmJcgtbL0gGXSoIv-ZfSHp2-adAk6rfEh_9ZV_xzjQY0io3mvQpzdP_olsezPJeDEU5JPiW0q4",
+    "width": 3000,
+    "height": 2652,
+    "source_title": "Bowl with pearl chasing dragons on a green ground, anonymous, c. 1680 - c. 1720",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-1955-10-A",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-004",
+   "name": "Powder Blue Fish Bowl",
+   "category": "Bowls",
+   "price": 38,
+   "sale_price": null,
+   "short": "Cobalt bowl with six swimming fish, glazed white inside.",
+   "image": {
+    "openverse_id": "8575e790-a7b7-4195-8457-a371b64ad90b",
+    "url": "https://lh5.ggpht.com/iGo6h0dOHbbJFaPVlzN0r5qSfZWdZ-MfNaz2m2V4QT798N01nMLIUCoU5I2k2fm6FeSWMwuRkQuGJeliAb05UDSNSgg",
+    "width": 2500,
+    "height": 2004,
+    "source_title": "Bowl with powder blue and six fish in underglaze red, anonymous, c. 1700",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-15842",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-005",
+   "name": "Celadon Lotus Bowl on Stand",
+   "category": "Bowls",
+   "price": 72,
+   "sale_price": null,
+   "short": "Sea-green lotus bowl that sits on its own pierced stand.",
+   "image": {
+    "openverse_id": "e2dc2105-f4df-49b4-8e6a-1f8ea52f5413",
+    "url": "https://lh3.googleusercontent.com/D_VVP7fYMLYvXUAIZBLX5C3atzGHZQfwgijGsqlOrDnrU38mjHreEaXgVf1oEn5RjmUvDNeamYpQteHEsIwph0U6kZA",
+    "width": 3000,
+    "height": 2498,
+    "source_title": "Bowl on stand, Théodore Deck, c. 1890",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-2013-15",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-006",
+   "name": "Rosebud Chocolate Cup & Saucer",
+   "category": "Cups & Saucers",
+   "price": 34,
+   "sale_price": null,
+   "short": "Lidded cup with a rosebud knop and a painted songbird.",
+   "image": {
+    "openverse_id": "ef1d627c-d7c4-435e-8933-e94d2330c210",
+    "url": "https://lh5.ggpht.com/a0tF5U9_HTzyt88hfFfjo3nDL3jXYv_m17ZK4TSF2leuIlcDsx1eRIzSK_d71KUA9mcn03Amw1Le3CnXUE7suar6xs0",
+    "width": 2500,
+    "height": 2500,
+    "source_title": "Chocolate cup and saucer, Porseleinfabriek Den Haag, 1785",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1968-109-A",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-007",
+   "name": "Gilded Trembleuse Saucer",
+   "category": "Cups & Saucers",
+   "price": 29,
+   "sale_price": null,
+   "short": "Deep saucer with a gilded rim and a raised well to steady the cup.",
+   "image": {
+    "openverse_id": "c41562ce-0138-42de-adef-2d8f9f2a8948",
+    "url": "https://lh4.ggpht.com/eVK6e9Wu8G7wfazAR7dYwNxcnPQiGg-07GsFsFMh48Z9YkPeW-GE83vgEWvSwe4jbueHzL6iMfPPlwU3262tYDQFTGg",
+    "width": 2500,
+    "height": 2500,
+    "source_title": "Cup and saucer (trembleuse), Meissener Porzellan Manufaktur, c. 1735 - c. 1740",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-17428-B",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-008",
+   "name": "Bell Cup & Saucer",
+   "category": "Cups & Saucers",
+   "price": 26,
+   "sale_price": null,
+   "short": "Small bell-shaped tea bowl and saucer with a diaper border.",
+   "image": {
+    "openverse_id": "99047fea-32b3-4bbf-85b3-a46c816d446d",
+    "url": "https://lh3.googleusercontent.com/eMBoLR_FYRxkJp4BlfiAJLZ-KK98C27JpddIECpmJkGTs7Hv_cla8V446KpLKvaR8Xu3V_gLYAQZTBcLnwZO8OGb3g",
+    "width": 2500,
+    "height": 2321,
+    "source_title": "Bell-shaped cup and saucer with antiquities and diaper pattern, anonymous, c. 1725 - c. 1749",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-NM-13764",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-009",
+   "name": "Amstel Landscape Cup & Saucer",
+   "category": "Cups & Saucers",
+   "price": 36,
+   "sale_price": null,
+   "short": "Cobalt saucer and cup with a hand-painted river scene.",
+   "image": {
+    "openverse_id": "1a102b33-ee1b-44c8-bdf7-fdd250e8b296",
+    "url": "http://lh5.ggpht.com/VNDKjEyeltBlS38qLWywLD7KoG1fwAenzvndcfDlMS-WIxNfu64x8dVso_8L_qPoaftXklMGc9U8Z4axEORs1cT-qQ",
+    "width": 2500,
+    "height": 2500,
+    "source_title": "Cup and saucer, Porceleinfabriek aan den Amstel, c. 1784 - c. 1809",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-14560-K",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-010",
+   "name": "Songbird Dessert Saucer",
+   "category": "Cups & Saucers",
+   "price": 22,
+   "sale_price": null,
+   "short": "Lilac rim and a perched bird; pairs with any of our cups.",
+   "image": {
+    "openverse_id": "491c09a6-baea-4332-9e13-63ac4e496960",
+    "url": "http://lh3.ggpht.com/X9L6wxB5iiczc9_KWiTJfFy_Qi6tIhu_XjoWC7mSJHUjuS8wMXG5L5ckavEtXl3LG_JPeiFeg8dP8_o2zDf-ChMPuyU",
+    "width": 2500,
+    "height": 2462,
+    "source_title": "Cup and saucer, Porseleinfabriek Den Haag, 1778",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1971-52-B",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-011",
+   "name": "Gourd Teapot in Red Clay",
+   "category": "Teapots & Jugs",
+   "price": 64,
+   "sale_price": null,
+   "short": "Unglazed red stoneware teapot in the shape of a bottle gourd.",
+   "image": {
+    "openverse_id": "c5a6d95c-2041-4d1a-8b00-a3adb5dbfb09",
+    "url": "https://lh5.ggpht.com/0REa0PAa2_KUC0Bfh4fgZKGglqCoYrT0IjkRYEjX0iNyW9GDR08bAxyqxfeMqidL6TuVK7YVcUVTpAbLgCfaTJzvS2E7",
+    "width": 2500,
+    "height": 2500,
+    "source_title": "Teapot in the form of a bottle gourd, anonymous, 1690 - 1710",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-NM-6580",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-012",
+   "name": "Blue Lappet Teapot",
+   "category": "Teapots & Jugs",
+   "price": 58,
+   "sale_price": null,
+   "short": "Round teapot with blue lappets and scattered blossoms.",
+   "image": {
+    "openverse_id": "43084109-4ba8-409e-8571-b7083766ddbb",
+    "url": "http://lh3.googleusercontent.com/A5Q-ajtNRmOMmKenKK3MS9YSD54PQBRIxxNpfJ6zHJ7R2nDDTTjMVy-J6mbLsJ3WgoQKmvSHWfmH0A1Ii6iGRWRgDA",
+    "width": 3000,
+    "height": 2603,
+    "source_title": "Teapot lappet motif and single blossoms, anonymous, c. 1700 - c. 1724",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-16309-C",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-013",
+   "name": "Raspberry Garden Teapot",
+   "category": "Teapots & Jugs",
+   "price": 62,
+   "sale_price": 54,
+   "short": "Pink garden panels and a gilded flower finial.",
+   "image": {
+    "openverse_id": "f7d18ddd-cd97-494c-b885-ae3f83cb15da",
+    "url": "https://lh5.ggpht.com/00PTK5m-ZMo-QUbQ8776wtF6kQNRT53KWoY4T0HkiHQh3P0y8Y9S1qlXk1vV1w9vseNxF0Y_NaWktC7KD3LCus8R27g",
+    "width": 3000,
+    "height": 2622,
+    "source_title": "Teapot with two panels with European scenes, anonymous, c. 1725 - c. 1774",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-NM-13891",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-014",
+   "name": "Lotus Scroll Teapot",
+   "category": "Teapots & Jugs",
+   "price": 59,
+   "sale_price": null,
+   "short": "Coral and green lotus scrolls on a compact, pouring-friendly body.",
+   "image": {
+    "openverse_id": "807b8001-4feb-40d2-9fcf-202563372929",
+    "url": "https://lh5.ggpht.com/8VSQTRBGKJtwLgo2iuA7NHXmPDSTKAT2fR0tf2rHiuEoB195ogMFn4Tq_8n55rTchMGkN3eNnQ7ZDZTCE1a4ECiVolSh",
+    "width": 3000,
+    "height": 2209,
+    "source_title": "Teapot with lotus scrolls and flower rosettes, anonymous, c. 1775 - c. 1799",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-14809-A",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-015",
+   "name": "Weesp Milk Jug",
+   "category": "Teapots & Jugs",
+   "price": 32,
+   "sale_price": null,
+   "short": "Tall white jug with a flower spray and a gold-touched lid.",
+   "image": {
+    "openverse_id": "580e7687-4ca3-4bf2-b91b-19cd12744adb",
+    "url": "https://lh6.ggpht.com/gke0xvm7zijaCz8Pv6aSiyGj9E5rapZIahw4kVKlUrQdn2ebBaiSkHeFilSJd7wwxpMPr4tP9SMvwzUQHVNjT_PdukU",
+    "width": 1935,
+    "height": 2500,
+    "source_title": "Milk jug, Weesper porseleinfabriek, c. 1759 - c. 1771",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1989-20",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-016",
+   "name": "Royal Ewer",
+   "category": "Teapots & Jugs",
+   "price": 46,
+   "sale_price": null,
+   "short": "Slender ewer with a high looped handle and gilt bands.",
+   "image": {
+    "openverse_id": "010bc8bd-1c0b-4ec7-bef7-201de595bee7",
+    "url": "https://lh3.ggpht.com/OIps2zqh4bI5tT14kh4sBYCKTYnVy5KLIXoeyitgDw8thJAcuKOmxVGCIxWaDXPU-UnkRw0FDnff_aQdBtLJ-yxZ8Q",
+    "width": 1873,
+    "height": 2500,
+    "source_title": "Teapot and milk jug, part of a tea service, Koninklijke Porseleinfabriek Dommer & Co., c. 1809 - c. 1814",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-15572-C",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-017",
+   "name": "Rattan Handle Kettle",
+   "category": "Teapots & Jugs",
+   "price": 68,
+   "sale_price": null,
+   "short": "White glazed kettle with a woven rattan handle.",
+   "image": {
+    "openverse_id": "4832a847-4d64-4be1-b1f8-2320e5ba2695",
+    "url": "http://lh6.ggpht.com/D6JaolBqfwZKga-ipkowp2A03ijodD3OSlIRRwXtT-RxExFWCXl-x2byog3lty2nRYg0G-xMB_3ShMkCkt7HzXwHqS8",
+    "width": 3000,
+    "height": 2244,
+    "source_title": "Theeketel met deksel van aardewerk versierd met groene en gele vierkanten, N.V. Plateelbakkerij Zuid-Holland, c. 1910 - c. 1920",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1972-135-A",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-018",
+   "name": "Butterfly Garden Plate",
+   "category": "Plates",
+   "price": 28,
+   "sale_price": null,
+   "short": "Blue-and-white plate with rocks, flowers and butterflies.",
+   "image": {
+    "openverse_id": "c0e0389f-dde0-47b9-b1f0-05e0cedd74ca",
+    "url": "https://lh3.googleusercontent.com/KYH70YEqPuvrB9Qe7TuEVKudZz_Lt-LpmRE7UurT3KswQkcIRr5eUb1_GhUWIMhHxE1-TZN3BfE8d7AAGBpQX06q4SVU",
+    "width": 2500,
+    "height": 2500,
+    "source_title": "Plate with rocks, flower sprays and butterflies, anonymous, c. 1700 - 1724",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-NM-13853",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-019",
+   "name": "Blue Pavilion Plate",
+   "category": "Plates",
+   "price": 32,
+   "sale_price": null,
+   "short": "Busy, joyful blue-and-white plate with a garden pavilion.",
+   "image": {
+    "openverse_id": "eee6b1f2-c999-4231-8533-399ae6510f67",
+    "url": "https://lh3.googleusercontent.com/w31YbDv7FGcz52Vee0eA18z6ACVe3rHHfl5VJu5MNnGxc1z76exRGvV8y-7m7NRptwdv3PZhnMeqeSsQkMHkcCIfYg",
+    "width": 3000,
+    "height": 3000,
+    "source_title": "Plate with flower sprays and figures in an interior and in a landscape, anonymous, c. 1700 - c. 1724",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-15802-D",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-020",
+   "name": "Scholar's Treasures Plate",
+   "category": "Plates",
+   "price": 34,
+   "sale_price": null,
+   "short": "Antiquities and dragons framed by a scale-pattern border.",
+   "image": {
+    "openverse_id": "52e2cf1d-4ecd-467d-9ac0-2b9d5f46b3a6",
+    "url": "https://lh6.ggpht.com/9EzR_a9Wz74v5OIeaD0gveG0yEAAOdoV5czG7ScriwhvSZu4e7pyZN4ouO7Spl2dd7dMAKPAdldZQBi2DReYfgiyjdg",
+    "width": 3000,
+    "height": 3000,
+    "source_title": "Plate with antiquities and dragons, anonymous, c. 1700 - c. 1724",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-15800-B",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-021",
+   "name": "Octagonal Flower Vase Plate",
+   "category": "Plates",
+   "price": 30,
+   "sale_price": null,
+   "short": "Eight-sided plate centred on a vase of flowers.",
+   "image": {
+    "openverse_id": "89254205-b8cd-4aaa-91d5-cde9b63d6dcf",
+    "url": "http://lh3.googleusercontent.com/3dcIiTSy8qlRB73FJ8dBuI9nKc_94aa4rPiX8RXXZfsm4lQNGHUxfEqhL7Y3VHntaP-VkaOyPcokKSw1zk4zflSRxac",
+    "width": 3000,
+    "height": 3000,
+    "source_title": "Octagonal plate with vase and flower sprays, anonymous, c. 1725 - c. 1749",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-RBK-16277-C",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-022",
+   "name": "Bouquet Lidded Vase",
+   "category": "Vases",
+   "price": 88,
+   "sale_price": null,
+   "short": "White baluster vase with bouquets and a flower finial.",
+   "image": {
+    "openverse_id": "eb7c4f6d-9f2f-4ebe-a4cf-56857b79fb86",
+    "url": "https://lh5.ggpht.com/vH6FjCXXAOcMNHxlUCG5-veG3Z1Boq9YR9p6jdDnqzsr2HDNn_AokxddgO4b3ZjjlusPAUOLPqngOtS66DLLNDw_neKW",
+    "width": 1626,
+    "height": 2500,
+    "source_title": "Lidded vase, Meissener Porzellan Manufaktur, c. 1740",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1969-103-A",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-023",
+   "name": "Powder Blue Bottle Vase",
+   "category": "Vases",
+   "price": 74,
+   "sale_price": null,
+   "short": "Pear-shaped bottle vase with a painted reserve.",
+   "image": {
+    "openverse_id": "1805381d-08d4-4307-a6fd-045033bc2eca",
+    "url": "http://lh6.ggpht.com/mnHH3uR20Zh9ZNH4Mbd3xF0Bb3YHH2guarqp41P_o9EtyHa9nS87kQJlRRVV-rdK-XZYcqN6kY0fP2qn6NVZGH1lwgc",
+    "width": 1949,
+    "height": 2500,
+    "source_title": "Pear-shaped bottle vase with powder blue, flower sprays and antiquities, anonymous, c. 1700 - c. 1724",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/AK-NM-6368-C",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-024",
+   "name": "Swallow Stoneware Vase",
+   "category": "Vases",
+   "price": 66,
+   "sale_price": null,
+   "short": "Speckled stoneware with a swallow in flight.",
+   "image": {
+    "openverse_id": "4d5dacd0-557c-4879-939a-33eee72ba279",
+    "url": "http://lh4.ggpht.com/fesDYijhPAp72_ue-aIR6h7gYE8JlREpxuPBDDkaasHxvskfyPA4BjdQYjIO0q9TtQr3zKN5N6WCNr-Mh3Z3V1ONng",
+    "width": 2142,
+    "height": 2500,
+    "source_title": "Vase, Ernest Chaplet, c. 1885 - c. 1886",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1989-5",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-025",
+   "name": "Pheasant Tea Caddy",
+   "category": "Vases",
+   "price": 44,
+   "sale_price": null,
+   "short": "Lidded caddy for loose tea with a long-tailed pheasant.",
+   "image": {
+    "openverse_id": "bd88083e-ee62-4cbb-adf6-518f84514a1e",
+    "url": "https://lh6.ggpht.com/JWvx2vEJ2u1Xt4VaaaWcgpebdiFbSvuJHnYg3eMWSy_a8bcpbfnnoiaCI1DPDriswAS04iDtSsztSt2F8RJUKlP7C3A",
+    "width": 2217,
+    "height": 2500,
+    "source_title": "Tea caddy, Weesper porseleinfabriek, c. 1769 - c. 1771",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-1974-48",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  },
+  {
+   "sku": "PP-026",
+   "name": "Gilded Sugar Bowl on Feet",
+   "category": "Teapots & Jugs",
+   "price": 52,
+   "sale_price": null,
+   "short": "Footed sugar bowl with gilding and a fruit finial.",
+   "image": {
+    "openverse_id": "cd8ed90f-45df-47e2-815c-f61310de4c0e",
+    "url": "https://lh4.ggpht.com/JkLlWUkdxSxvo0KygbQCiyQ2jm1Oz5Vn_B6ZvM1Nmiv55nWfYAL6cmjDo1ffstTBuczY0prZwkpk6u-XmEStIgtoxVe3",
+    "width": 2500,
+    "height": 2500,
+    "source_title": "Sugar bowl, Meissener Porzellan Manufaktur, c. 1725 - c. 1730",
+    "source_page": "https://www.rijksmuseum.nl/en/collection/BK-17416",
+    "license": "CC0 1.0 (public domain dedication)",
+    "provider": "Rijksmuseum, Amsterdam"
+   }
+  }
+ ],
+ "hero": {
+  "openverse_id": "ee2cc9be-f518-4c1c-a8ad-b75f95d59dd8",
+  "url": "https://lh4.ggpht.com/4ACrIcdzDpGnzLTvLxvx4wo_mlzTw8PXqaZRf_73FqygysnfTYUCj8MpgPSSSP0nSAJS7d6bkkb545j-oTbOzeb2gA",
+  "width": 2500,
+  "height": 1508,
+  "source_title": "Still Life with Apples in a Delft Blue Bowl, Willem de Zwart, 1880 - 1890",
+  "source_page": "https://www.rijksmuseum.nl/en/collection/SK-A-3361",
+  "license": "CC0 1.0 (public domain dedication)",
+  "provider": "Rijksmuseum, Amsterdam"
+ }
+}

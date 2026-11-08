@@ -1,0 +1,43 @@
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP syntax
+        run: find wp-content scripts config -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Shell syntax
+        run: for f in scripts/*.sh scripts/wp/*.sh tests/*.sh; do bash -n "$f"; done
+      - name: theme.json and catalogue are valid JSON
+        run: python3 -m json.tool wp-content/themes/pear-porcelain/theme.json >/dev/null && python3 -m json.tool seed/catalog.json >/dev/null
+
+  store:
+    # Builds the whole stack from scratch, then runs the smoke, security and tracking tests against it.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Build and seed the store (after state)
+        run: scripts/setup.sh
+      - name: Smoke test (pages + a test order through the Store API)
+        run: tests/smoke.sh
+      - name: Security checklist
+        run: tests/security.sh
+      - name: GA4 ecommerce events (headless Chrome walk)
+        run: npx tsx tests/tracking/walk.ts
+      - name: Before state really fails the security checklist
+        run: |
+          scripts/state-before.sh
+          if tests/security.sh; then echo "expected failures in the before state"; exit 1; fi
+      - name: Logs on failure
+        if: failure()
+        run: docker compose logs --tail=200 wordpress

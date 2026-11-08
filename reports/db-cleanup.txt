@@ -1,0 +1,8 @@
+                                   before        after
+Revisions                            1320            0
+Expired transients                  15000            0
+Spam + trashed comments              3000            0
+Orphaned post meta                  20000            0
+Autoloaded options (KB)              2561           69
+Finished background jobs            30078        10093
+Database size (MB)                   58.3           10

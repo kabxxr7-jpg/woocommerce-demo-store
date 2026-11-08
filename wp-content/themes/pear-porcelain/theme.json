@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{ "slug": "base", "name": "Porcelain", "color": "#fbf8f3" },
+				{ "slug": "contrast", "name": "Ink", "color": "#1d2733" },
+				{ "slug": "accent-1", "name": "Delft blue", "color": "#2c5a8a" },
+				{ "slug": "accent-2", "name": "Coral glaze", "color": "#b85c3c" },
+				{ "slug": "accent-3", "name": "Linen", "color": "#efe8dc" },
+				{ "slug": "accent-4", "name": "Stone", "color": "#6b6760" },
+				{ "slug": "accent-5", "name": "Cream", "color": "#f4efe7" },
+				{ "slug": "accent-6", "name": "Line", "color": "#e2dbcf" }
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "Manrope", "slug": "manrope", "fontFamily": "Manrope, sans-serif",
+					"fontFace": [ { "src": [ "file:./assets/fonts/Manrope-VariableFont_wght-latin.woff2" ], "fontWeight": "200 800", "fontStyle": "normal", "fontFamily": "Manrope", "fontDisplay": "swap" } ]
+				},
+				{
+					"name": "Vollkorn", "slug": "vollkorn", "fontFamily": "Vollkorn, serif",
+					"fontFace": [
+						{ "src": [ "file:./assets/fonts/Vollkorn-VariableFont_wght-latin.woff2" ], "fontWeight": "400 900", "fontStyle": "normal", "fontFamily": "Vollkorn", "fontDisplay": "swap" },
+						{ "src": [ "file:./assets/fonts/Vollkorn-Italic-VariableFont_wght-latin.woff2" ], "fontWeight": "400 900", "fontStyle": "italic", "fontFamily": "Vollkorn", "fontDisplay": "swap" }
+					]
+				}
+			]
+		},
+		"layout": { "contentSize": "720px", "wideSize": "1240px" }
+	},
+	"styles": {
+		"color": { "background": "var:preset|color|base", "text": "var:preset|color|contrast" },
+		"typography": { "fontFamily": "var:preset|font-family|manrope", "fontSize": "var:preset|font-size|medium", "lineHeight": "1.6" },
+		"elements": {
+			"heading": { "typography": { "fontFamily": "var:preset|font-family|vollkorn", "fontWeight": "500", "letterSpacing": "-0.01em" } },
+			"link": { "color": { "text": "var:preset|color|contrast" } },
+			"button": {
+				"color": { "background": "var:preset|color|accent-1", "text": "var:preset|color|base" },
+				"border": { "radius": "999px" },
+				"typography": { "fontWeight": "600" },
+				":hover": { "color": { "background": "var:preset|color|contrast", "text": "var:preset|color|base" } }
+			}
+		},
+		"blocks": {
+			"core/site-title": { "typography": { "fontFamily": "var:preset|font-family|vollkorn", "fontWeight": "600", "fontSize": "1.6rem", "letterSpacing": "-0.01em" } },
+			"core/navigation": { "typography": { "fontSize": "0.95rem", "fontWeight": "500" } },
+			"woocommerce/product-price": { "color": { "text": "var:preset|color|accent-2" } }
+		}
+	}
+}

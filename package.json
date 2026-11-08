@@ -1,0 +1,16 @@
+{
+  "name": "woo-store",
+  "private": true,
+  "type": "module",
+  "description": "Pear & Porcelain: a fictional WooCommerce demo store with measured speed work, hardening and GA4 tracking.",
+  "scripts": {
+    "test:tracking": "tsx tests/tracking/walk.ts",
+    "test:security": "bash tests/security.sh",
+    "test:smoke": "bash tests/smoke.sh",
+    "lighthouse": "node scripts/lighthouse.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.64.1",
+    "tsx": "4.23.15"
+  }
+}

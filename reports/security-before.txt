@@ -1,0 +1,34 @@
+     Check (base http://127.0.0.1:8081, public host shop.kabiirlabs.com)
+FAIL readme.html not served (version disclosure)                    (200)
+FAIL license.txt not served                                         (200)
+FAIL wp-config.php refused                                          (200)
+FAIL xmlrpc.php refused (brute force / pingback abuse)              (200)
+PASS .htaccess and dotfiles refused                                 
+PASS debug.log not served                                           
+PASS no directory listing in uploads                                
+FAIL ?author=1 does not reveal a user name                          (301 http://127.0.0.1:8081/author/pp-owner-82kb5k/)
+FAIL REST API does not list users                                   (200)
+FAIL wp-login.php closed on the public address                      (200)
+FAIL wp-admin closed on the public address                          (302)
+FAIL admin-ajax.php still works on the public address               (302)
+PASS unknown Host header refused (host header injection)            
+FAIL header: Content-Security-Policy                                (missing)
+FAIL header: X-Content-Type-Options                                 (missing)
+FAIL header: X-Frame-Options                                        (missing)
+FAIL header: Referrer-Policy                                        (missing)
+FAIL header: Permissions-Policy                                     (missing)
+FAIL header: Strict-Transport-Security on the HTTPS address         (missing)
+PASS no X-Powered-By (PHP version)                                  
+PASS Server header without version                                  
+FAIL no generator meta tag (WordPress/WooCommerce version)          (found)
+FAIL PHP in uploads cannot run                                      (200)
+PASS file editor off (DISALLOW_FILE_EDIT)                           
+PASS no administrator called admin                                  
+PASS application passwords off                                      
+FAIL login attempts limited (plugin active)                         (inactive)
+PASS outgoing email suppressed (demo store)                         
+PASS database port not published on the host                        
+PASS only 127.0.0.1 can reach the web container                     
+PASS WordPress core files match wordpress.org checksums             
+
+13 of 31 checks passed

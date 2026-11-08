@@ -1,0 +1,74 @@
+# ---------------------------------------------------------------------------
+# Pear & Porcelain: server rules for the "after" state (speed + hardening).
+# Written by scripts/state-after.sh; scripts/state-before.sh puts back the plain WordPress rules.
+# ---------------------------------------------------------------------------
+
+# H1. Block files that should never be fetched: config, logs, dotfiles, readme/licence (version disclosure),
+#     XML-RPC, and install/upgrade scripts.
+<FilesMatch "^(wp-config\.php|wp-config-sample\.php|readme\.html|license\.txt|xmlrpc\.php|install\.php|debug\.log|error_log|\.ht.*|.*\.(sql|bak|old|orig|swp|log|ini|sh|env))$">
+    Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule (^|/)\. - [F]
+RewriteRule ^wp-admin/install\.php$ - [F]
+# H2. No PHP runs from uploads (an uploaded "image.php" cannot execute).
+RewriteRule ^wp-content/uploads/.*\.(php|phtml|phar|php[0-9])$ - [F,NC]
+# H5. Admin and login are not reachable on the public address (the tunnel); only on 127.0.0.1:8081.
+#     admin-ajax.php and admin-post.php stay open: WooCommerce and forms post to them.
+RewriteCond %{HTTP_HOST} ^shop\.kabiirlabs\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/(wp-login\.php|wp-admin(/.*)?)$
+RewriteCond %{REQUEST_URI} !^/wp-admin/(admin-ajax|admin-post)\.php$
+RewriteRule ^ - [R=404,L]
+# H3. Block the classic ?author=N user scan before WordPress even loads.
+RewriteCond %{QUERY_STRING} (^|&)author=\d+ [NC]
+RewriteRule ^ - [F]
+</IfModule>
+
+# H4. Security headers on every response (pages, cached pages and static files).
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(self)"
+    Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+    Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTP:X-Forwarded-Proto} == 'https'"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com https://*.google-analytics.com https://tagassistant.google.com; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://fonts.googleapis.com; img-src 'self' data: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.google.com https://fonts.gstatic.com https://ssl.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.google.com; frame-src 'self' https://www.googletagmanager.com https://tagassistant.google.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
+    Header always unset X-Powered-By
+    Header unset X-Pingback
+</IfModule>
+
+# P1. Compress text responses.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/javascript application/json image/svg+xml font/ttf application/rss+xml
+</IfModule>
+
+# P2. Long browser caching for static files (WordPress adds ?ver= to CSS/JS, so a change gets a new URL).
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp  "access plus 1 year"
+    ExpiresByType image/jpeg  "access plus 1 year"
+    ExpiresByType image/png   "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2  "access plus 1 year"
+    ExpiresByType text/css    "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+    <FilesMatch "\.(webp|jpe?g|png|svg|woff2|css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress

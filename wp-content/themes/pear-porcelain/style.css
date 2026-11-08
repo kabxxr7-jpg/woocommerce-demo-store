@@ -1,0 +1,77 @@
+/*
+Theme Name: Pear & Porcelain
+Template: twentytwentyfive
+Description: Child theme of Twenty Twenty-Five for the fictional Pear & Porcelain demo store (WooCommerce blocks, light and dark).
+Version: 1.0.0
+License: GPL-2.0-or-later
+Text Domain: pear-porcelain
+*/
+
+/* Dark mode follows the visitor's system setting: swap the palette variables that every block uses. */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--wp--preset--color--base: #14181f;
+		--wp--preset--color--contrast: #ece7df;
+		--wp--preset--color--accent-1: #8fb4dc;
+		--wp--preset--color--accent-2: #e39a7c;
+		--wp--preset--color--accent-3: #1f2630;
+		--wp--preset--color--accent-4: #a8a29a;
+		--wp--preset--color--accent-5: #1a2029;
+		--wp--preset--color--accent-6: #2b3440;
+		color-scheme: dark;
+	}
+}
+
+.pp-demo-bar {
+	background: var(--wp--preset--color--accent-1);
+	color: #fff;
+	font-size: 0.8125rem;
+	letter-spacing: 0.02em;
+	padding: 0.45rem 1rem;
+	text-align: center;
+}
+@media (prefers-color-scheme: dark) { .pp-demo-bar { color: #10151c; } }
+
+.pp-demo-checkout {
+	border: 1px solid var(--wp--preset--color--accent-1);
+	background: var(--wp--preset--color--accent-5);
+	border-radius: 10px;
+	padding: 0.9rem 1.1rem;
+	margin: 0 0 1.5rem;
+	font-size: 0.9375rem;
+}
+
+/* Consent banner */
+.pp-consent {
+	position: fixed; z-index: 1000; left: 1rem; right: 1rem; bottom: 1rem;
+	max-width: 34rem; margin-left: auto;
+	background: var(--wp--preset--color--base); color: var(--wp--preset--color--contrast);
+	border: 1px solid var(--wp--preset--color--accent-6); border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(0,0,0,.12); padding: 1rem 1.1rem; font-size: .875rem;
+}
+.pp-consent[hidden] { display: none; }
+.pp-consent p { margin: 0 0 .75rem; }
+.pp-consent__buttons { display: flex; gap: .5rem; justify-content: flex-end; flex-wrap: wrap; }
+.pp-consent button { font: inherit; border-radius: 999px; padding: .55rem 1.1rem; cursor: pointer; min-height: 44px; }
+.pp-consent__decline { background: transparent; color: inherit; border: 1px solid var(--wp--preset--color--accent-4); }
+.pp-consent__accept { background: var(--wp--preset--color--accent-1); color: #fff; border: 1px solid var(--wp--preset--color--accent-1); }
+@media (prefers-color-scheme: dark) { .pp-consent__accept { color: #10151c; } }
+
+/* Product cards: soft studio-grey frame like the photos, gentle lift on hover */
+.wc-block-components-product-image img,
+.wp-block-woocommerce-product-image img { border-radius: 12px; background: #e9e8e6; aspect-ratio: 1; object-fit: cover; }
+.wc-block-product { transition: transform .2s ease; }
+.wc-block-product:hover { transform: translateY(-3px); }
+.pp-category-tile img { border-radius: 14px; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .3s ease; }
+.pp-category-tile a:hover img { transform: scale(1.02); }
+.pp-category-tile { overflow: hidden; }
+.pp-hero .wp-block-cover__inner-container { max-width: 36rem; }
+.pp-badges { font-size: .9375rem; }
+.pp-badges svg { width: 28px; height: 28px; color: var(--wp--preset--color--accent-1); }
+
+/* Sale badge: readable contrast (WooCommerce's default colours fail WCAG AA on this palette) */
+.wc-block-components-product-sale-badge, span.onsale {
+	background: var(--wp--preset--color--accent-2) !important;
+	color: #fff !important;
+	border-color: var(--wp--preset--color--accent-2) !important;
+}
